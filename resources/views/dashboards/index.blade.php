@@ -389,7 +389,7 @@
               <div class="inner">
                 <h3>150</h3>
 
-                <p>IAS</p>
+                <p>IASSSSSSSSSSSSSSSSSSSSSSS</p>
               </div>
               <div class="icon">
               <i class="ion ion-stats-bars"></i>
