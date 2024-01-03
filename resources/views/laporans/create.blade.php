@@ -31,28 +31,17 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Bidang:</strong>
-                        <select id="bidang" name="bidang" class="form-control">
-                            <option hidden>Select Bidang</option>
-                            <option value="Dagri">Dagri</option>
-                            <option value="Aspas">Aspas</option>
-                            <option value="Ameroaf">Ameroaf</option>
-                        </select>
-                        {{-- <input type="text" name="wilayah" class="form-control" placeholder="Wilayah"> --}}
-                        @error('wilayah')
+                        <strong>Negara:</strong>
+                        <input type="text" name="bidang" class="form-control" placeholder=""> 
+                        @error('bidang')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Sub Bidang:</strong>
-                        <select id="wilayah" name="wilayah" class="form-control">
-                            {{-- <option value="Wilayah1">Wilayah1</option>
-                            <option value="Wilayah2">Wilayah2</option>
-                            <option value="Wilayah3">Wilayah3</option> --}}
-                        </select>
-                        {{-- <input type="text" name="wilayah" class="form-control" placeholder="Wilayah"> --}}
+                        <strong>Sumber:</strong>
+                     <input type="text" name="wilayah" class="form-control" placeholder="">
                         @error('wilayah')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
@@ -80,9 +69,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Isi:</strong>
-
-
+                        <strong>Keyword:</strong>
                         <textarea class="form-control" id="isi" name="isi" rows="5"></textarea>
                         {{-- <input type="text" name="isi" class="form-control" placeholder="Isi"> --}}
                         @error('isi')
@@ -102,8 +89,8 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Tempat:</strong>
-                        <input type="text" name="tempat" class="form-control" placeholder="tempat">
+                        <strong>Lain-Lain:</strong>
+                        <input type="text" name="tempat" class="form-control" placeholder="">
                         @error('tempat')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror

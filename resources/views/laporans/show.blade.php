@@ -29,7 +29,7 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Bidang:</strong>
+                        <strong>Negara:</strong>
                         <select id="bidang" name="bidang" class="form-control" disabled>
                             <option hidden value="{{ $laporan->bidang }}">{{ $laporan->bidang }}</option>
                            
@@ -42,13 +42,9 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Sub Bidang :</strong>
-                        <select id="wilayah" name="wilayah"  class="form-control" disabled>
-                            <option hidden value="{{ $laporan->wilayah }}">{{ $laporan->wilayah }}</option>
-                          
-                          </select>
-                        {{-- <input type="text" name="wilayah" value="{{ $laporan->wilayah }}" class="form-control"
-                            placeholder=""> --}}
+                        <strong>Sumber :</strong>
+                        <input type="text" name="wilayah" value="{{ $laporan->wilayah }}" class="form-control"
+                            placeholder="">
                         @error('wilayah')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
@@ -97,7 +93,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong>Tempat:</strong>
+                        <strong>Lain-Lain:</strong>
                         <input disabled type="text" name="tempat" value="{{ $laporan->tempat }}" class="form-control"
                             placeholder="">
                         @error('tempat')

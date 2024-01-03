@@ -307,12 +307,12 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Bidang</th>
-                            <th>Wilayah</th>
+                            <th>Negara</th>
+                            <th>Sumber</th>
                             <th>Tanggal</th>
                             <th style="display: none">Tanggal</th>
                             <th>Judul</th>
-                            <th>Isi</th>
+                            <th style="display: none" >Isi</th>
                             <th>File</th>
                             <th>Creator</th>
                             <th>Action</th>
@@ -392,6 +392,7 @@
                 },
                 {
                     data: 'isi',
+                    visible: false,
                     name: 'isi'
 
                 },
