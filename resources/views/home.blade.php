@@ -96,7 +96,7 @@
                   <label for="exampleInputPassword1" class="form-label">Password</label>
                   <input class="form-control" type="password" name="password" />
                   <!-- <input type="password" class="form-control" id="exampleInputPassword1"> -->
-                  <div id="emailHelp" class="form-text mt-3">Forget password ?</div>
+                  <!-- <div id="emailHelp" class="form-text mt-3">Forget password ?</div> -->
                 </div>
               
                 <button type="submit" class="btn btn-primary mt-5">Login</button>
