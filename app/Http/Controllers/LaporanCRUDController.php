@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Datatables;
 use App\Models\File;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB; // Pastikan ini ada
+
 
 class LaporanCRUDController extends Controller
 {
@@ -15,8 +17,14 @@ class LaporanCRUDController extends Controller
 *
 * @return \Illuminate\Http\Response
 */
+public function index_2()
+    {
+        $count = DB::table('laporans')->count();
+        return view('laporans.index', ['count' => $count]);
+    }
 public function index()
 {
+    $count = DB::table('laporans')->count();
     $role_id=Auth::user()->role_id;
     
     if ($role_id==4)

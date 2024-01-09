@@ -284,6 +284,7 @@
         <div class="pull-left">
             <h2>Daftar Laporan</h2>
             <h4>{{ Auth::user()->name }}</h4>
+       
             {{-- <h4>{{Auth::user()->role_id}}</h4> --}}
 
         </div>
