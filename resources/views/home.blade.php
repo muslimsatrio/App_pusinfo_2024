@@ -75,7 +75,6 @@
 
 <body>
         <div class="container-fluid">
-        <!-- <div class="col-md-12"> -->
         @if(session('success'))
             <p class="alert alert-success">{{ session('success') }}</p>
             @endif
