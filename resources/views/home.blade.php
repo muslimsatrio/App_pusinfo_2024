@@ -74,7 +74,8 @@
 </body>  -->
 
 <body>
-        <div class="container-fluid">
+      <div class="container-fluid">
+      <div id="particles-js">
         @if(session('success'))
             <p class="alert alert-success">{{ session('success') }}</p>
             @endif
@@ -100,9 +101,15 @@
               
                 <button type="submit" class="btn btn-primary mt-5">Login</button>
               </form>
-        </div>
-        <!-- </div> -->
-
+      </div>
+      </div>
+<!-- Importing particles.js script from JSDeliver -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS.load("particles-js", "plugins/asfie/particles.json", function () {
+        console.log("particles.json loaded!");
+      });
+    </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
