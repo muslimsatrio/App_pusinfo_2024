@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="plugins/asfie/style.css" rel="stylesheet" >
+  <link href="plugins/asfie/loginstyle.css" rel="stylesheet" >
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
   
@@ -74,7 +74,11 @@
 </body>  -->
 
 <body>
-      <div class="container-fluid">
+<div class="container-fluid header text-center">
+<h1>DATABASE MANAGEMENT SYSTEM</h1>
+  <h3 class="pisp mt-2">Pusat Informasi Strategis Pertahanan</h3>                 
+</div>
+<div class="background-container">
       <div id="particles-js">
         @if(session('success'))
             <p class="alert alert-success">{{ session('success') }}</p>
@@ -86,21 +90,23 @@
             @endif
             <form action="{{ route('login.action') }}" method="POST" class="mx-auto">
                 @csrf
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Logo_Kementerian_Pertahanan_Republik_Indonesia_%282022%29.png" class="card-img-top"/>
                 <h4 class="text-center">Login</h4>
-                <div class="mb-3 mt-5">
-                  <label for="exampleInputEmail1" class="form-label">User Name</label>
+                <div class="mb-3 mt-3 col-auto">
+                  <label for="exampleInputEmail1" class="form-label">Username</label>
                   <input class="form-control" type="username" name="username" value="{{ old('username') }}" />
                   <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
                 </div>
-                <div class="mb-3">
+                <div class="mb-3 col-auto">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
                   <input class="form-control" type="password" name="password" />
                   <!-- <input type="password" class="form-control" id="exampleInputPassword1"> -->
                   <!-- <div id="emailHelp" class="form-text mt-3">Forget password ?</div> -->
                 </div>
               
-                <button type="submit" class="btn btn-primary mt-5">Login</button>
+                <button type="submit" class="btn btn-primary mt-3">Login</button>
               </form>
+      </div>
       </div>
       </div>
 <!-- Importing particles.js script from JSDeliver -->

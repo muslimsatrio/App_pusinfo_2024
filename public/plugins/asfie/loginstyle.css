@@ -1,32 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-  
 }
 
 body{
-    /* background-image: url("image/background.png"); */
-    background: linear-gradient(90deg, rgb(1, 1, 1) 0%, rgb(71, 2, 2) 35%, rgb(124, 26, 11) 100%);
     font-family: 'Poppins', sans-serif;
-    background-size: auto;
+}
+
+.background-container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(1, 1, 1) 0%, rgb(71, 2, 2) 35%, rgb(124, 26, 11) 100%);
+    background-size: cover; /* Untuk memastikan gambar memenuhi container */
+}
+
+.mx-auto{
+    margin: auto;
+}
+
+.card-img-top{
+    width: 70px;
+    height: auto;
+    display: block;
+    margin-top: 5px;
+}
+
+.text-center {
+    margin-top: -55px;
+    margin-bottom: 50px;
 }
 
 #particles-js {
-    /* background: skyblue; */
     height: 100vh;
   }
 
+.header{
+position: absolute;
+top:15%;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+h3{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
 
 form{
     border-radius: 20px;
     margin-top: 150px !important;
     width: 24% !important;
     background-color: white !important;
-    padding: 50px;
+    padding: 40px;
     position: absolute;
-    left: 40%;
+    left: 38%;
+    top: 10%;
+    font-weight: 200;
 }
 
 .btn-primary{
@@ -45,13 +79,15 @@ form{
     border-bottom: 1px solid;
     border-radius: 4px 4px 0 0;
     }
+
  h4{
     font-size: 2rem !important;
-    font-weight: 700;
+    font-weight: normal;
  }  
  .form-label{
-    font-weight: 800 !important;
+    font-weight: 200 !important;
  }
+
 @media only screen and (max-width: 600px) {
     form {
         width: 100% !important;
