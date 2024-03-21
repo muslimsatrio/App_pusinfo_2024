@@ -132,7 +132,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
             <div class="inner">
-                <h3>153<sup style="font-size: 20px"></sup></h3>
+                <h3>{{ $count_asis }}<sup style="font-size: 20px"></sup></h3>
 
                 <p>ASIS</p>
               </div>
@@ -147,7 +147,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
             <div class="inner">
-                <h3>53<sup style="font-size: 20px"></sup></h3>
+                <h3>{{ $count_ago }}<sup style="font-size: 20px"></sup></h3>
                 <p>AGO</p>
               </div>
               <div class="icon">
@@ -161,7 +161,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+                <h3>{{ $count_dgse }}</h3>
                 <p>DGSE</p>
               </div>
               <div class="icon">
@@ -175,7 +175,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+                <h3>{{ $count_dih }}</h3>
 
                 <p>DIH</p>
               </div>
@@ -193,7 +193,7 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3>{{ $count_ias }}</h3>
 
                 <p>IAS</p>
               </div>

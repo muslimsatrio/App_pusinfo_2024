@@ -24,24 +24,37 @@ public function index()
     $count_total = DB::table('laporans')
     ->leftjoin('tb_user', 'laporans.user', '=', 'tb_user.name')
     ->count();
-
-    $count_dagri = DB::table('laporans')
+   
+    $count_asis = DB::table('laporans')
     ->leftjoin('tb_user', 'laporans.user', '=', 'tb_user.name')
-    ->where('tb_user.role_id', 1)->count();
-
-    $count_amero = DB::table('laporans')
+    ->where('wilayah', 'ASIS')->count();
+    // Batas
+    $count_ago = DB::table('laporans')
     ->leftjoin('tb_user', 'laporans.user', '=', 'tb_user.name')
-    ->where('tb_user.role_id', 2)->count();
-
-    $count_aspas = DB::table('laporans')
+    ->where('wilayah', 'AGO')->count();
+    //
+    $count_dgse = DB::table('laporans')
     ->leftjoin('tb_user', 'laporans.user', '=', 'tb_user.name')
-    ->where('tb_user.role_id', 3)->count();
+    ->where('wilayah', 'DGSE')->count();
+    //
+    $count_dih = DB::table('laporans')
+    ->leftjoin('tb_user', 'laporans.user', '=', 'tb_user.name')
+    ->where('wilayah', 'DIH')->count();
+    //
+    $count_ias = DB::table('laporans')
+    ->leftjoin('tb_user', 'laporans.user', '=', 'tb_user.name')
+    ->where('wilayah', 'IAS')->count();
+    // dd($count_dgse);
+
 
     return view('dashboards.index')
     ->with('count_total', $count_total)
-    ->with('count_dagri', $count_dagri)
-    ->with('count_amero', $count_amero)
-    ->with('count_aspas', $count_aspas);
+    ->with('count_asis', $count_asis)
+    ->with('count_ago', $count_ago)
+    ->with('count_dgse', $count_dgse)
+    ->with('count_dih', $count_dih)
+    ->with('count_ias', $count_ias);
+   
 
   
     
