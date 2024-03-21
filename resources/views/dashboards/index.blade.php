@@ -133,7 +133,6 @@
             <div class="small-box bg-info">
             <div class="inner">
                 <h3>{{ $count_asis }}<sup style="font-size: 20px"></sup></h3>
-
                 <p>ASIS</p>
               </div>
               <div class="icon">
@@ -191,7 +190,7 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div style="color:" class="small-box">
               <div class="inner">
                 <h3>{{ $count_ias }}</h3>
 
@@ -210,7 +209,7 @@
               <div class="inner">
               <h3>152</h3>
 
-                <p>Lorem Ipsum</p>
+                <p>Perjanjian Bilateral</p>
               </div>
               <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -225,7 +224,7 @@
               <div class="inner">
                 <h3>24</h3>
 
-                <p>Lorem Ipsum</p>
+                <p>Produk Strategis</p>
               </div>
               <div class="icon">
               <i class="ion ion-stats-bars"></i>
@@ -240,7 +239,7 @@
               <div class="inner">
                 <h3>165</h3>
 
-                <p>Lorem Ipsum</p>
+                <p>Produk Tahunan</p>
               </div>
               <div class="icon">
               <i class="ion ion-stats-bars"></i>
