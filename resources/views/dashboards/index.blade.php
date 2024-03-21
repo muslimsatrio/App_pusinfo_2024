@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>DMS LAPHAR</title>
+    <title>PISP SYSTEM</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
@@ -130,7 +130,7 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div style="background-color: #ff6961" class="small-box">
             <div class="inner">
                 <h3>{{ $count_asis }}<sup style="font-size: 20px"></sup></h3>
                 <p>ASIS</p>
@@ -144,7 +144,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div style="background-color: #ffb480" class="small-box">
             <div class="inner">
                 <h3>{{ $count_ago }}<sup style="font-size: 20px"></sup></h3>
                 <p>AGO</p>
@@ -158,7 +158,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div style="background-color: #f8f38d" class="small-box">
               <div class="inner">
                 <h3>{{ $count_dgse }}</h3>
                 <p>DGSE</p>
@@ -172,7 +172,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div style="background-color: #42d6a4" class="small-box">
               <div class="inner">
                 <h3>{{ $count_dih }}</h3>
 
@@ -190,7 +190,7 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div style="color:" class="small-box">
+            <div style="background-color: #08cad1" class="small-box">
               <div class="inner">
                 <h3>{{ $count_ias }}</h3>
 
@@ -205,7 +205,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div style="background-color: #59adf6" class="small-box">
               <div class="inner">
               <h3>152</h3>
 
@@ -220,7 +220,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div style="background-color: #9d94ff" class="small-box">
               <div class="inner">
                 <h3>24</h3>
 
@@ -235,7 +235,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div style="background-color: #c780e8" class="small-box">
               <div class="inner">
                 <h3>165</h3>
 
