@@ -6,6 +6,7 @@
     <title>View Laporan</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countries-list@2.4.0/dist/countries.min.json"></script>
 </head>
 
 <body>
@@ -43,7 +44,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Sumber :</strong>
-                        <input type="text" name="wilayah" value="{{ $laporan->wilayah }}" class="form-control"
+                        <input type="text" disabled name="wilayah" value="{{ $laporan->wilayah }}" class="form-control"
                             placeholder="">
                         @error('wilayah')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
@@ -101,8 +102,7 @@
                         @enderror
                     </div>
                 </div>
-                <a class="btn btn-primary" href="{{ route('laporans.index') }}" enctype="multipart/form-data">
-                    Back</a>
+                <a class="btn btn-primary ml-3" style="margin-right: 10px;"  href="{{ route('laporans.index') }}" enctype="multipart/form-data">Back</a>
                 {{-- <button type="submit" class="btn btn-primary ml-3">Submit</button> --}}
             </div>
         </form>

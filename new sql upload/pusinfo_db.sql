@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 13 Feb 2023 pada 10.30
+-- Waktu pembuatan: 23 Mar 2024 pada 04.54
 -- Versi server: 10.4.27-MariaDB
 -- Versi PHP: 8.2.0
 
@@ -108,13 +108,6 @@ CREATE TABLE `laporans` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data untuk tabel `laporans`
---
-
-INSERT INTO `laporans` (`id`, `bidang`, `wilayah`, `tanggal`, `judul`, `isi`, `catatan`, `tempat`, `user`, `filename`, `url`, `created_at`, `updated_at`) VALUES
-(1, 'Ameroaf', 'Lainnya', '2023-02-13', 'Laporan Mingguan Amero', 'Contoh isi', 'contoh catatannn', 'eropa', 'Admin Ameroaf', '20230213_LAP INFOGRAFIS AMEROAF - 9 sd 13 Januari 2023.pptx', 'uploads/20230213_LAP INFOGRAFIS AMEROAF - 9 sd 13 Januari 2023.pptx', '2023-02-13 00:21:38', '2023-02-13 00:21:38');
-
 -- --------------------------------------------------------
 
 --
@@ -196,7 +189,11 @@ INSERT INTO `tb_user` (`user_id`, `name`, `username`, `role_id`, `password`, `cr
 (1, 'Admin Dagri', 'Admin_Dagri', 1, '$2y$10$cqMl647QsZ8yjYHu4FJH5uH6laU.N/ZEOoWtHhQbtds7/yd49e96K', '2022-08-31 05:08:48', '2022-08-31 05:08:48'),
 (2, 'Admin Ameroaf', 'Admin_Ameroaf', 2, '$2y$10$W/pXAZB1HRc0u2oNnhThmuQdYCJr9mTnS9VWWDVqFjIQ12sXkD8uS', '2022-08-31 08:15:20', '2022-08-31 08:15:20'),
 (3, 'Admin Aspas', 'Admin_Aspas', 3, '$2y$10$mQGpvZj4RpMEyLly43I6Le5MWNP2WtuVOzviYD3oz.eKDFaiX0lj6', '2022-08-31 08:15:46', '2022-08-31 08:15:46'),
-(4, 'Admin TU', 'Admin_TU', 4, '$2y$10$q3YXwbF07c1NQRUzXD/RgOnYVL62EW9kXvw9Cn9EU7rl6ScjT1Fc.', '2022-08-31 08:16:09', '2022-08-31 08:16:09');
+(4, 'Admin TU', 'Admin_TU', 4, '$2y$10$q3YXwbF07c1NQRUzXD/RgOnYVL62EW9kXvw9Cn9EU7rl6ScjT1Fc.', '2022-08-31 08:16:09', '2022-08-31 08:16:09'),
+(5, 'Kabadan', 'Kabadan', 4, '$2y$10$q3YXwbF07c1NQRUzXD/RgOnYVL62EW9kXvw9Cn9EU7rl6ScjT1Fc.', '2024-03-23 03:53:11', '2024-03-23 03:53:11'),
+(6, 'Admin_01', 'Admin_01', 4, '$2y$10$q3YXwbF07c1NQRUzXD/RgOnYVL62EW9kXvw9Cn9EU7rl6ScjT1Fc.', '2024-03-23 03:53:11', '2024-03-23 03:53:11'),
+(7, 'Admin_02', 'Admin_02', 4, '$2y$10$q3YXwbF07c1NQRUzXD/RgOnYVL62EW9kXvw9Cn9EU7rl6ScjT1Fc.', '2024-03-23 03:53:11', '2024-03-23 03:53:11'),
+(8, 'Admin_03', 'Admin_03', 4, '$2y$10$q3YXwbF07c1NQRUzXD/RgOnYVL62EW9kXvw9Cn9EU7rl6ScjT1Fc.', '2024-03-23 03:53:11', '2024-03-23 03:53:11');
 
 -- --------------------------------------------------------
 
@@ -316,7 +313,7 @@ ALTER TABLE `files`
 -- AUTO_INCREMENT untuk tabel `laporans`
 --
 ALTER TABLE `laporans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT untuk tabel `migrations`
@@ -334,7 +331,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

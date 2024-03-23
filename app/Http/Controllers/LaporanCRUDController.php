@@ -80,7 +80,7 @@ $request->validate([
 'isi' => 'required',
 'catatan' => 'required',
 'tempat' => 'required',
-'file' => 'required|mimes:pdf,xlx,csv,doc,docx,ppt,pptx|max:20480'
+'file' => 'required|mimes:pdf,xlx,csv,doc,docx,ppt,pptx'
 ]);
 $today = date("Ymd");  
 
@@ -124,7 +124,9 @@ return view('laporans.show',compact('laporan'));
 */
 public function edit(Laporan $laporan)
 {
+    // dd($laporan);
 return view('laporans.edit',compact('laporan'));
+
 }
 
 /**
@@ -145,7 +147,7 @@ $request->validate([
     'isi' => 'required',
     'catatan' => 'required',
     'tempat' => 'required',
-    'file' => 'mimes:pdf,xlx,csv,doc,docx,ppt,pptx|max:20480'
+    'file' => 'mimes:pdf,xlx,csv,doc,docx,ppt,pptx'
 ]);
 $today = date("Ymd"); 
 $laporan = new Laporan;

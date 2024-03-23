@@ -15,8 +15,8 @@ class FileUploadController extends Controller
     {
          
         $validatedData = $request->validate([
-         'file' => 'required|csv,txt,xlx,xls,pdf|max:2048',
- 
+        //  'file' => 'required|csv,txt,xlx,xls,pdf|max:2048',
+        'file' => 'required|csv,txt,xlx,xls,pdf',
         ]);
  
         $name = $request->file('file')->getClientOriginalName();

@@ -6,6 +6,12 @@
     <title>Edit Laporan</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/countries-list@2.4.0/dist/countries.min.json"></script>
+    <style>
+  body {
+    background-color: #f0f0f0; /* Ganti dengan kode warna yang diinginkan */
+  }
+</style>
 </head>
 
 <body>
@@ -16,8 +22,8 @@
                     <h2>Edit Laporan</h2>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-primary" href="{{ route('laporans.index') }}" enctype="multipart/form-data">
-                        Back</a>
+                    <!-- <a class="btn btn-primary" href="{{ route('laporans.index') }}" enctype="multipart/form-data">
+                        Back</a> -->
                 </div>
             </div>
         </div>
@@ -33,7 +39,10 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Negara:</strong>
-                        <input type="text" name="bidang" class="form-control" placeholder="">
+                        <select name="bidang" class="form-control" id="negaraDropdown">
+                        <option value="{{ $laporan->bidang }}">{{ $laporan->bidang }}</option>
+                        </select>
+                        <!-- <input type="text" name="bidang" value="{{ $laporan->bidang }}" class="form-control" placeholder=""> -->
                         @error('bidang')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
@@ -42,8 +51,19 @@
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                         <strong>Sumber :</strong>
-                        <input type="text" name="wilayah" value="{{ $laporan->wilayah }}" class="form-control"
-                            placeholder=""> 
+                        <select name="wilayah" class="form-control">
+                        <option value="{{ $laporan->wilayah }}">{{ $laporan->wilayah }}</option>
+                        <option value="ASIS">ASIS</option>
+                        <option value="AGO">AGO</option>
+                        <option value="DGSE">DGSE</option>
+                        <option value="DIH">DIH</option>
+                        <option value="IAS">IAS</option>
+                        <option value="Perjanjian Bilateral">Perjanjian Bilateral</option>
+                        <option value="Produk Strategis">Produk Strategis</option>
+                        <option value="Produk Tahunan">Produk Tahunan</option>
+                        </select>
+                        <!-- <input type="text" name="wilayah" value="{{ $laporan->wilayah }}" class="form-control"
+                            placeholder="">  -->
                         @error('wilayah')
                             <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
                         @enderror
@@ -113,43 +133,43 @@
                         @enderror
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success ml-3">Submit</button>
+                <button type="submit" class="btn btn-success ml-3" style="margin-right: 10px;">Submit</button>
+                <!-- <button type="submit" class="btn btn-success ml-3">Submit</button> -->
                 <a class="btn btn-primary" href="{{ route('laporans.index') }}" enctype="multipart/form-data">
                     Back</a>
             </div>
         </form>
     </div>
     <script type="text/javascript">
-        $("#bidang").on('change', function() {
-            var a = $("#bidang option:selected").val();
-            // alert("ini adalah" + a);
+    // Fungsi untuk membuat opsi dropdown dari daftar negara
+    function populateDropdown() {
+        // Daftar negara diambil dari API
+        fetch('https://restcountries.com/v3.1/all')
+            .then(response => response.json())
+            .then(data => {
+                const dropdown = document.getElementById("negaraDropdown");
 
-            if (a == "Dagri") {
-                $('#wilayah').empty();
-                $("#wilayah").append(new Option("Ideologi", "Ideologi"));
-                $("#wilayah").append(new Option("Politik", "Politik"));
-                $("#wilayah").append(new Option("Ekonomi", "Ekonomi"));
-                $("#wilayah").append(new Option("Sosbud", "Sosbud"));
-                $("#wilayah").append(new Option("Hankam", "Hankam"));
-                $("#wilayah").append(new Option("Lainnya", "Lainnya"));
-                // alert("ini adalah dagri");
-            } else if (a == "Aspas") {
-                $('#wilayah').empty();
-                $("#wilayah").append(new Option("Asgara Auceania", "Asgara_Auceania"));
-                $("#wilayah").append(new Option("Astimteng", "Astimteng"));
-                $("#wilayah").append(new Option("Asselbar", "Asselbar"));
-                $("#wilayah").append(new Option("Lainnya", "Lainnya"));
-                // alert("ini adalah Aspas");
-            } else if (a == "Ameroaf") {
-                $('#wilayah').empty();
-                $("#wilayah").append(new Option("Amerika", "Amerika"));
-                $("#wilayah").append(new Option("Eropa", "Eropa"));
-                $("#wilayah").append(new Option("Afrika", "Afrika"));
-                $("#wilayah").append(new Option("Lainnya", "Lainnya"));
-                // alert("ini adalah Ameroaf");
-            }
-        });
-    </script>
+                // Mengurutkan daftar negara berdasarkan nama
+                data.sort((a, b) => {
+                    if (a.name.common < b.name.common) return -1;
+                    if (a.name.common > b.name.common) return 1;
+                    return 0;
+                });
+
+                // Menambahkan opsi dropdown setelah diurutkan
+                data.forEach(country => {
+                    const option = document.createElement("option");
+                    option.text = country.name.common;
+                    option.value = country.name.common;
+                    dropdown.appendChild(option);
+                });
+            })
+            .catch(error => console.error('Error fetching countries:', error));
+    }
+
+    // Panggil fungsi untuk menambah opsi dropdown saat halaman dimuat
+    populateDropdown();
+</script>
 </body>
 
 </html>
