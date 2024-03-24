@@ -87,7 +87,7 @@
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
             <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
-                        class="nav_logo-name">DMS Report</span> </a>
+                        class="nav_logo-name">PISP SYSTEM</span> </a>
                 <div class="nav_list">
                 <a href="{{ route('dashboards.index') }}" class="nav_link ">
                         <i class='bx bx-grid-alt nav_icon'></i>
@@ -123,6 +123,9 @@
     </div>
     <!--Container Main start-->
     <div class="height-100 bg-light">
+      <div class="pull-left">
+          <h2>Dashboard</h2>
+      </div>
     <body>
     <section class="content">
       <div class="container-fluid">
@@ -130,7 +133,7 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div style="background-color: #ff6961" class="small-box">
             <div class="inner">
                 <h3>{{ $count_asis }}<sup style="font-size: 20px"></sup></h3>
                 <p>ASIS</p>
@@ -144,7 +147,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div style="background-color: #ffb480" class="small-box">
             <div class="inner">
                 <h3>{{ $count_ago }}<sup style="font-size: 20px"></sup></h3>
                 <p>AGO</p>
@@ -158,7 +161,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div style="background-color: #f8f38d" class="small-box">
               <div class="inner">
                 <h3>{{ $count_dgse }}</h3>
                 <p>DGSE</p>
@@ -172,7 +175,7 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div style="background-color: #42d6a4" class="small-box">
               <div class="inner">
                 <h3>{{ $count_dih }}</h3>
 
@@ -190,7 +193,7 @@
         <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div style="color:#" class="small-box">
+            <div style="background-color: #08cad1" class="small-box">
               <div class="inner">
                 <h3>{{ $count_ias }}</h3>
 
@@ -205,9 +208,9 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div style="background-color: #59adf6" class="small-box">
               <div class="inner">
-              <h3>0</h3>
+              <h3>152</h3>
 
                 <p>Perjanjian Bilateral</p>
               </div>
@@ -220,9 +223,9 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div style="background-color: #9d94ff" class="small-box">
               <div class="inner">
-                <h3>0</h3>
+                <h3>24</h3>
 
                 <p>Produk Strategis</p>
               </div>
@@ -235,9 +238,9 @@
           <!-- ./col -->
           <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div style="background-color: #c780e8" class="small-box">
               <div class="inner">
-                <h3>0</h3>
+                <h3>165</h3>
 
                 <p>Produk Tahunan</p>
               </div>
