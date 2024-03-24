@@ -122,10 +122,10 @@
         </nav>
     </div>
     <!--Container Main start-->
-    <div class="height-100 bg-light">
+    <!-- <div class="height-100 bg-light">
       <div class="pull-left">
           <h2>Dashboard</h2>
-      </div>
+      </div> -->
     <body>
     <section class="content">
       <div class="container-fluid">
@@ -210,7 +210,7 @@
             <!-- small box -->
             <div style="background-color: #59adf6" class="small-box">
               <div class="inner">
-              <h3>152</h3>
+              <h3>0</h3>
 
                 <p>Perjanjian Bilateral</p>
               </div>
@@ -225,7 +225,7 @@
             <!-- small box -->
             <div style="background-color: #9d94ff" class="small-box">
               <div class="inner">
-                <h3>24</h3>
+                <h3>0</h3>
 
                 <p>Produk Strategis</p>
               </div>
@@ -240,7 +240,7 @@
             <!-- small box -->
             <div style="background-color: #c780e8" class="small-box">
               <div class="inner">
-                <h3>165</h3>
+                <h3>0</h3>
 
                 <p>Produk Tahunan</p>
               </div>
