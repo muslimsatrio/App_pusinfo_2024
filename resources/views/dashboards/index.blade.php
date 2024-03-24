@@ -207,7 +207,7 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-              <h3>152</h3>
+              <h3>0</h3>
 
                 <p>Perjanjian Bilateral</p>
               </div>
@@ -222,7 +222,7 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>24</h3>
+                <h3>0</h3>
 
                 <p>Produk Strategis</p>
               </div>
@@ -237,7 +237,7 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>165</h3>
+                <h3>0</h3>
 
                 <p>Produk Tahunan</p>
               </div>
