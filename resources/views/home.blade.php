@@ -75,8 +75,8 @@
 
 <body>
 <div class="container-fluid header text-center">
-<h1>DATABASE MANAGEMENT SYSTEM</h1>
-  <h3 class="pisp mt-2">Pusat Informasi Strategis Pertahanan</h3>                 
+<h1>PISP SYSTEM</h1>
+  <!-- <h3 class="pisp mt-2">Pusat Informasi Strategis Pertahanan</h3>                  -->
 </div>
 <div class="background-container">
       <div id="particles-js">
